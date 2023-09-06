@@ -24,11 +24,13 @@ import { HousingService } from "../housing.service";
 export class HomeComponent {
   readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
 
+  filteredLocationList: Housinglocation[] = [];
   housingLocationList: Housinglocation[] = []
 
   housingService: HousingService = inject(HousingService);
 
   constructor() {
     this.housingLocationList = this.housingService.getAllHousingLocations();
+    this.filteredLocationList = this.housingLocationList;
   }
 }
