@@ -8,9 +8,7 @@ export class HousingService {
 
   constructor() { }
 
-  readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
-
-  url = 'http://localhost:3000/locations';
+  url = 'http://127.0.0.1:8000/api/listings';
 
   async getAllHousingLocations(): Promise<Housinglocation[]> {
     const data = await fetch(this.url);

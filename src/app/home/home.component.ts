@@ -8,7 +8,7 @@ import {RouterLink} from "@angular/router";
   imports: [CommonModule, RouterLink],
   template: `
       <div class="vimeo-wrapper">
-        <iframe src="https://player.vimeo.com/video/861725941?background=1&autoplay=1&loop=1&byline=0&title=0background=1&autoplay=1&loop=1&byline=0&title=0"
+        <iframe src="https://player.vimeo.com/video/861749387?background=1&autoplay=1&loop=1&byline=0&title=0background=1&autoplay=1&loop=1&byline=0&title=0"
                 frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
     <section>
