@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
-import { HomeComponent } from "./home/home.component";
+import { HomeComponent } from "./listing/home.component";
 import { RouterModule } from '@angular/router';
+import {NgOptimizedImage} from "@angular/common";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HomeComponent, RouterModule],
+  imports: [HomeComponent, RouterModule, NgOptimizedImage],
   template: `
     <main>
       <a [routerLink]="['/']">
-    <header class="PayQuad">
+    <header class="payquad" id="navbar">
       <img class="PayQuad-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
     </header>
       </a>

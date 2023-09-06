@@ -1,48 +1,23 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HousingLocationComponent } from "../housing-location/housing-location.component";
-import { Housinglocation } from "../housinglocation";
-import { HousingService } from "../housing.service";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HousingLocationComponent],
+  imports: [CommonModule, RouterLink],
   template: `
+      <div class="vimeo-wrapper">
+        <iframe src="https://player.vimeo.com/video/861725941?background=1&autoplay=1&loop=1&byline=0&title=0background=1&autoplay=1&loop=1&byline=0&title=0"
+                frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
     <section>
-      <form>
-        <input type="text" placeholder="Filter by city" #filter>
-        <button id="apply-filter" class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
-      </form>
-    </section>
-    <section class="results">
-      <app-housing-location *ngFor="let housingLocation of filteredLocationList" [housingLocation]="housingLocation"></app-housing-location>
+      <p class="header-home" >Browse the hottest homes of 2023.</p>
+      <button id="view-homes" class="primary action" type="button" [routerLink]="['/listing']">View homes</button>
     </section>
   `,
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
-  readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
+export class HomePageComponent {
 
-  filteredLocationList: Housinglocation[] = [];
-  housingLocationList: Housinglocation[] = []
-
-  housingService: HousingService = inject(HousingService);
-
-  constructor() {
-    this.housingService.getAllHousingLocations().then((housingLocationList: Housinglocation[]) => {
-      this.housingLocationList = housingLocationList;
-      this.filteredLocationList = housingLocationList;
-    });
-  }
-
-  filterResults(text: string) {
-    if (!text) {
-      this.filteredLocationList = this.housingLocationList;
-    }
-
-    this.filteredLocationList = this.housingLocationList.filter(
-      housingLocation => housingLocation?.city.toLowerCase().includes(text.toLowerCase())
-    );
-  }
 }

@@ -1,40 +1,76 @@
-.results {
-  display: grid;
-  column-gap: 14px;
-  row-gap: 14px;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
-  margin-top: 50px;
-  justify-content: space-around;
+.action {
+  margin-top: 24px;
+  font-family: "Avenir Next";
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 25%;
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 4px 16px;
+  min-height: 52px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  color: #fff;
+  border: 0;
+  border-radius: 7px;
+  transition: background-color .25s ease-in-out,box-shadow .25s ease-in-out;
 }
 
-input[type="text"] {
-  border: solid 1px var(--primary-color);
-  padding: 10px;
-  border-radius: 8px;
-  margin-right: 4px;
-  display: inline-block;
-  width: 30%;
+.vimeo-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.vimeo-wrapper iframe {
+  width: 100vw;
+  height:  56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+  min-height: 100vh;
+  min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -37.5%);
+  z-index: -1;
 }
 
-button {
-  padding: 10px;
-  border: solid 1px var(--primary-color);
-  background: var(--primary-color);
+.header-home {
+  margin: var(var(--spacing-3)) 0 var(--spacing-2);
+  letter-spacing: 0;
   color: white;
-  border-radius: 8px;
+  text-shadow: -1px -1px 0 var(--primary-color), 1px -1px 0 var(--primary-color), -1px 1px 0 var(--primary-color), 1px 1px 0 var(--primary-color);
+  font-weight: bold !important;
+  font-size: 40px !important;
+  margin: 0;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: "Avenir Next";
 }
 
-@media (min-width: 500px) and (max-width: 768px) {
-  .results {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  input[type="text"] {
-    width: 70%;
-  }
-}
 
-@media (max-width: 499px) {
-  .results {
-    grid-template-columns: 1fr;
-  }
+:root {
+  --spacing: 8px;
+  --spacing-1: var(--spacing);
+  --spacing-1-5: calc(var(--spacing) * 1.5);
+  --spacing-2: calc(var(--spacing) * 2);
+  --spacing-3: calc(var(--spacing) * 3);
+  --spacing-4: calc(var(--spacing) * 4);
+  --spacing-5: calc(var(--spacing) * 5);
+  --spacing-6: calc(var(--spacing) * 6);
+  --spacing-6-5: calc(var(--spacing) * 6.5);
+  --button-height: var(--base-form-element-height);
+  --base-form-element-height: var(--spacing-6-5);
+  --lg-font-size: 16px;
+  --font-default-weight: 400;
 }
