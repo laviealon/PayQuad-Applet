@@ -21,8 +21,8 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
         <h2 class="section-heading">About this housing location</h2>
         <ul>
           <li>Units available: {{housingLocation?.availableUnits}}</li>
+          <li>Square footage: {{housingLocation?.sqf}}</li>
           <li>Price: {{housingLocation?.price}}</li>
-          <li>Does this location have laundry: {{housingLocation?.laundry}}</li>
         </ul>
       </section>
       <section class="listing-apply">

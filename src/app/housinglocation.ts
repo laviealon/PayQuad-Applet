@@ -5,6 +5,6 @@ export interface Housinglocation {
   province: string;
   photo: string;
   availableUnits: number;
-  laundry: boolean;
-  price: number;
+  sqf: string;
+  price: string;
 }
