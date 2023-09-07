@@ -1,6 +1,6 @@
 # Property Lister #
 
-A simple web app that lists properties with search functionality. Built with AngularJS on the frontend and the Laravel framework on the backend ([see the backend repository](github.com/laviealon/PayQuad-Applet-Backend)).
+A simple web app that lists properties with search functionality. Built with AngularJS on the frontend and the Laravel framework on the backend ([see the backend repository](https://github.com/laviealon/PayQuad-Applet-Backend)).
 
 ## Low-Level Implementation of Features ##
 
