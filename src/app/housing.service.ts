@@ -8,7 +8,7 @@ export class HousingService {
 
   constructor() { }
 
-  url = 'http://127.0.0.1:8000/api/listings';
+  url = 'https://serene-ravine-17663-6962461bc679.herokuapp.com/api/listings';
 
   async getAllHousingLocations(): Promise<Housinglocation[]> {
     const data = await fetch(this.url);

@@ -11,7 +11,7 @@ import { HousingService } from "../housing.service";
   template: `
     <section>
       <form>
-        <input id="filter" type="text" placeholder="Filter by city" #filter>
+        <input id="filter" type="text" placeholder="Search listings" #filter>
         <button id="apply-filter" class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
       </form>
     </section>
@@ -23,8 +23,6 @@ import { HousingService } from "../housing.service";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
-
   filteredLocationList: Housinglocation[] = [];
   housingLocationList: Housinglocation[] = []
 
@@ -44,6 +42,7 @@ export class HomeComponent {
 
     this.filteredLocationList = this.housingLocationList.filter(
       housingLocation => housingLocation?.city.toLowerCase().includes(text.toLowerCase())
+        || housingLocation?.province.toLowerCase().includes(text.toLowerCase()) || housingLocation?.name.toLowerCase().includes(text.toLowerCase())
     );
   }
 }

@@ -27,7 +27,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
       </section>
       <section class="listing-apply">
         <h2 class="section-heading">Apply now to live here</h2>
-        <form [formGroup]="applyForm" (submit)="submitApplication()">
+        <form id="detailsForm" [formGroup]="applyForm" (submit)="submitApplication()" action="mailto:alon.lavie55@gmail.com" method="post">
           <label for="first-name">First Name</label>
           <input id="first-name" type="text" formControlName="firstName">
 
@@ -36,8 +36,9 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
           <label for="email">Email</label>
           <input id="email" type="email" formControlName="email">
-          <button type="submit" class="primary">Apply now</button>
+          <button type="submit" value="Send" class="primary">Apply now</button>
         </form>
+
       </section>
     </article>
   `,
