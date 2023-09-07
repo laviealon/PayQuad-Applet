@@ -2,7 +2,7 @@
 
 A simple Angular web app that retrieves a list of properties from the RESTful API backend and displays them. Built with Angular on the frontend and Laravel on the backend. The docs for the backend are in the repo hosting the backend, titled "PayQuad-Applet-Backend".
 
-## Implementation of Frotend Features ##
+## Implementation of Frontend Features ##
 
 ### Search Functionality ###
 
