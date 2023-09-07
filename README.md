@@ -11,7 +11,7 @@ Search functionality is achieved with Angular filtering, by calling ```HomeCompo
 
 ## Deployment ##
 
-The app is deployed to Heroku @ [https://payquad-applet-88a344739165.herokuapp.com/]. Two important features were necessary for this deployment:
+The app is deployed to Heroku @ https://payquad-applet-88a344739165.herokuapp.com/. Two important features were necessary for this deployment:
 
 - The `server.js` script uses ExpressJS to serve the app's static files in a production evironment.
 
