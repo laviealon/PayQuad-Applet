@@ -15,6 +15,10 @@ Page navigation is achieved using Angular's router service.
 
 ### Dynamic Data Repitition ###
 
+### Form Submission ###
+
+The form in the property details pages makes use of Angular's `FormGroup` and `FormControl` to handle input validation and management, with the `submitApplication()` function handling submission logic (in this small app, we simply log the input to the console - see *Future Enhancments*).
+
 ### Backend Communication ###
 
 ## Deployment ##
